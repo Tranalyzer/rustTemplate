@@ -1,0 +1,106 @@
+\IfFileExists{t2doc.cls}{
+    \documentclass[documentation]{subfiles}
+}{
+    \errmessage{Error: could not find 't2doc.cls'}
+}
+
+\begin{document}
+
+\trantitle
+    {rustTemplate} % Plugin name
+    {rustTemplate} % Short description
+    {Tranalyzer Development Team} % author(s)
+
+\section{rustTemplate}\label{s:rustTemplate}
+
+\subsection{Description}
+The rustTemplate plugin analyzes ...
+
+\subsection{Dependencies}
+
+%\traninput{file} % use this command to input files
+%\traninclude{file} % use this command to include files
+
+%\tranimg{image} % use this command to include an image (must be located in a subfolder ./img/)
+
+\subsubsection{External Libraries}
+This plugin depends on the {\bf XXX} library.
+\paragraph{Ubuntu:} {\tt sudo apt-get install XXX}
+\paragraph{Arch:} {\tt sudo pacman -S XXX}
+
+\subsubsection{Other Plugins}
+This plugin requires the {\bf XXX} plugin.
+
+\subsubsection{Required Files}
+The file {\tt file.txt} is required.
+
+\subsection{Configuration Flags}
+The following flags can be used to control the output of the plugin:
+\begin{longtable}{lcll}
+    {\bf Name} & {\bf Default} & {\bf Description} & {\bf Flags}\\
+    \hline\endhead
+    {\tt FLAG1} & 0 & Whether (1) or not (0) to activate FLAG1\\
+    {\tt OPT2} & 1 & 0: no OPT2, 1: one OPT2, 2: two OPT2 & {\tt FLAG1=1}\\
+\end{longtable}
+
+\subsection{Flow File Output}
+The rustTemplate plugin outputs the following columns:
+\begin{longtable}{llll}
+    {\bf Column} & {\bf Type} & {\bf Description} & {\bf Flags}\\
+    \hline\endhead
+    {\tt \nameref{rustTemplateStat}} & H8 & Status & \\
+    {\tt \hyperref[rustTemplateStat]{col1}} & S & describe col1 (string) & {\tt NUDEL=1} (only shown if NUDEL=1)\\
+    {\tt col2} & U32 & describe col2 (uint32) & \\
+    {\tt col3} & I16 & describe col3 (int16) & \\
+    {\tt col4} & H8 & describe col4 (hex/uint8) & \\
+    {\tt col5} & F\_D & describe col5 (compound (float, double)) & \\
+\end{longtable}
+
+\subsubsection{rustTemplateStat}\label{rustTemplateStat}
+The {\tt rustTemplateStat} column is to be interpreted as follows:
+\begin{longtable}{rl}
+    {\bf rustTemplateStat} & {\bf Description}\\
+    \hline\endhead
+    {\tt 0x01} & Flow is rustTemplate\\
+\end{longtable}
+
+\subsection{Packet File Output}
+In packet mode ({\tt --s} option), the rustTemplate plugin outputs the following columns:
+\begin{longtable}{llll}
+    {\bf Column} & {\bf Type} & {\bf Description} & {\bf Flags}\\
+    \hline\endhead
+    {\tt rustTemplateCol1} & I8 & describe col1 & \\
+\end{longtable}
+ 
+\subsection{Plugin Report Output}
+The following information is reported:
+\begin{itemize}
+    \item Number of XXX packets
+    \item Aggregated status flags ({\tt\nameref{rustTemplateStat}})
+\end{itemize}
+
+\subsection{Additional Output}
+Non-standard output:
+\begin{itemize}
+    \item {\tt PREFIX\_suffix.txt}: description
+\end{itemize}
+
+\subsection{Post-Processing}
+
+\subsection{Example Output}
+
+\subsection{Known Bugs and Limitations}
+
+\subsection{TODO}
+\begin{itemize}
+    \item TODO1
+    \item TODO2
+\end{itemize}
+
+\subsection{References}
+\begin{itemize}
+    \item \href{https://tools.ietf.org/html/rfcXXXX}{RFCXXXX}: Title
+    \item \url{https://www.iana.org/assignments/}
+\end{itemize}
+
+\end{document}
