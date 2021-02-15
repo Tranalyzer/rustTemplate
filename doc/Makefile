@@ -1,3 +1,3 @@
 INFILE = rustTemplate
 
-include ../../doc/Makefile.plugin
+include ../../../doc/Makefile.plugin
