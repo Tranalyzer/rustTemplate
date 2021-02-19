@@ -6,8 +6,8 @@ in [Rust](https://www.rust-lang.org/) using the
 
 ## Create a new plugin
 
-1. [Download](https://tranalyzer.com/getit) and [install](https://tranalyzer.com/install)
-   Tranalyzer2.
+1. [Download](https://tranalyzer.com/downloads) and
+   [install](https://tranalyzer.com/tutorial/installation) Tranalyzer2.
 
 2. Create a new Rust plugin
 
